@@ -1,0 +1,36 @@
+package ej1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Ej1 {
+
+	public int[] solve(int[] entrada){
+		int resultado[] ={( ((entrada[1] - entrada[0])+ 1) * (entrada[0] + entrada[1]) ) / 2}; 
+		return resultado;
+		
+	}
+	public static void main(String[] args) throws IOException {
+		InputStreamReader isr = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader (isr);
+		int numero_de_casos = 0;
+		Ej1 aux = new Ej1();
+		
+		int[] operandos = {0,0};
+
+		numero_de_casos = Integer.parseInt(br.readLine());
+
+		
+		for(int i = 0; i < numero_de_casos;i++){
+			String aux1 = br.readLine();
+			String palabrasSeparadas[] = aux1.split(" ");
+			
+			for (int j=0; j < palabrasSeparadas.length; j++){
+				operandos[j] = Integer.parseInt(palabrasSeparadas[j]);
+			}
+			System.out.println(aux.solve(operandos)[0]);
+		}
+	}
+
+}

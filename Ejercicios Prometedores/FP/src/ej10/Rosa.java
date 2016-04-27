@@ -7,13 +7,23 @@ import java.io.IOException;
 
 public class Rosa {
 	public int[] solve(int[] entrada){
+		
+		if(entrada[0] < 1 || entrada[1] < entrada[0]){
+			throw new IllegalArgumentException();
+		}
 		int[] resultado = new int[entrada[1]];
 		int pagina_inicial = entrada[0];
 		int pagina_final = entrada[1];
 		
 		int digitos_totales = 0;
 		for(int i = pagina_inicial; i <= pagina_final; i++){
-			digitos_totales = (int) (digitos_totales + Math.log10(i)+1);
+			int aux = i;
+			int noOfDigit = 1;
+			//System.out.println(aux);
+			while((aux=aux/10) != 0) ++noOfDigit;
+			//System.out.println(noOfDigit);
+			//System.out.println("---------");
+			digitos_totales = digitos_totales + noOfDigit;
 		}
 		boolean encontrado = false;
 		boolean restar = false;
@@ -56,7 +66,8 @@ public class Rosa {
 			entrada[1] = Integer.parseInt(palabrasSeparadas[1]);
 			
 			Rosa a = new Rosa();
-			a.solve(entrada);
+			//a.solve(entrada);
+			System.out.println(a.solve(entrada)[0]);
 		}
 	}
 	}

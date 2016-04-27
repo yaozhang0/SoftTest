@@ -68,6 +68,7 @@ public class Carreras {
 		}
 		System.out.println("---------");
 		*/
+		if(entrada[0] < 1)	throw new IllegalArgumentException();
 		int[] pilas = new int[entrada.length - 2];
 		for(int i = 0; i < entrada[0]; i++){
 			pilas[i] = entrada[2+i];
@@ -98,7 +99,7 @@ public class Carreras {
 	    resultado[0] = coches;
 		return resultado;
 	}
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		BufferedReader bf = new BufferedReader(new FileReader("entrada_coches"));
 		String aux1 = bf.readLine();
 		int numero_de_casos = Integer.parseInt(aux1);

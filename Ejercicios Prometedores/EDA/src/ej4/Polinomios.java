@@ -48,6 +48,12 @@ public class Polinomios {
 		
 	}
 	public static void main(String[] args) throws IOException {
+	/*	int[] entrada = new int[3];
+		entrada[0] = 0;	entrada[1] = 0;	entrada[2] = 7;
+		Polinomios a = new Polinomios();
+		//System.out.println(a.solve(entrada)[0]);
+		 * 
+		 */
 		BufferedReader bf = new BufferedReader(new FileReader("entrada_polinomios"));
 		
 		try{
@@ -92,7 +98,7 @@ public class Polinomios {
 		catch(Exception e){
 			System.out.println(e);
 		}
-		
+	
 	}
 	
 }

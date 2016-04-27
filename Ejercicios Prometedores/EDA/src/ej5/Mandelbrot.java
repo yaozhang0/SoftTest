@@ -49,6 +49,10 @@ public class Mandelbrot {
 	
 	public int[] solve(float[] entrada){
 		
+		if(entrada[0] > 2 || entrada[0] < -2 || entrada[1] > 2 || entrada[1] < -2 || entrada[2] > 500 || entrada[0] < 100){
+			throw new IllegalArgumentException();
+		}
+		
 		int[] salida = new int[1];
 
 		boolean encontrado = false;

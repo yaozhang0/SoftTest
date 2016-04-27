@@ -9,6 +9,7 @@ public class Salvados9 {
 	public int[] solve(float[] entrada){
 		int[] resultado = new int[1];
 		
+		if(entrada[0] == 0) throw new IllegalArgumentException();
 		/*for(int i = 0; i < entrada.length;i++){
 			System.out.println(entrada[i]);
 		}

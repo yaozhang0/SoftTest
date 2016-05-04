@@ -7,10 +7,13 @@ import java.io.IOException;
 public class HotelPico {
 
 	public int ingresosFinal(int[] v,int a,int b,int precio,int acu){
-		  if (a >= b) return acu;
-		  else {
-		    return ingresosFinal(v,a+1,b-1,precio*2,acu + precio*v[a] + precio*v[b]);
+		int resultado = 0;	
+		if (a >= b) resultado = acu;
+		else {
+			resultado = ingresosFinal(v,a+1,b-1,precio*2,acu + precio*v[a] + precio*v[b]);
 		  }
+		
+		return resultado;
 		}
 	public int[] solve(int[] entrada){
 		

@@ -8,13 +8,14 @@ import java.io.IOException;
 public class Fobinacci {
 
 	private int fob(int x,int y, int n){
-		if(n == 0) return x;
-		else if (n == 1) return y;
+		int resultado = 0;
+		if(n == 0) resultado = x;
+		else if (n == 1) resultado = y;
 		  else {
-		    return fob(x,y,n-1) + fob(x,y,n-2);
+		    resultado = fob(x,y,n-1) + fob(x,y,n-2);
 		  }
+		return resultado;
 		}
-	
 	public int[] solve(int[] entrada){
 		int[] resultado = new int[1];
 		

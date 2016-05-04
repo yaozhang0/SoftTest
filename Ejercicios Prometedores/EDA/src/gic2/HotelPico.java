@@ -13,6 +13,8 @@ public class HotelPico {
 		  }
 		}
 	public int[] solve(int[] entrada){
+		
+		if(entrada.length % 2 == 0) throw new ArithmeticException();
 		int[] resultado = new int[1];
 		
 		resultado[0] = ingresosFinal(entrada,1,entrada.length-1,1,0);

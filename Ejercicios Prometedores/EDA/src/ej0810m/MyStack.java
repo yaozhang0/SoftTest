@@ -1,14 +1,14 @@
 package ej0810m;
 public class MyStack {
    private int maxSize;
-   private long[] stackArray;
+   private int[] stackArray;
    private int top;
    public MyStack(int s) {
       maxSize = s;
-      stackArray = new long[maxSize];
+      stackArray = new int[maxSize];
       top = -1;
    }
-   public void push(long j) {
+   public void push(int j) {
       stackArray[++top] = j;
    }
    public long pop() {
